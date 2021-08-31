@@ -196,6 +196,47 @@ namespace Planeterne_OOP
             Planetlist.Add(Pluto);
 
             Console.WriteLine(Planetlist.Count);
+
+            Console.WriteLine();
+
+            List<Planeter> Planetsbelowzero = new List<Planeter>();
+
+            foreach ( Planeter planet in Planetlist)
+            {
+                if (planet.Mean_temperature <0)
+                {
+                    Planetsbelowzero.Add(planet);
+                }
+            }
+            foreach (Planeter planet in Planetsbelowzero)
+            {
+                Console.WriteLine(planet.Navn);
+            }
+            Console.WriteLine();
+
+            List<Planeter> diameterplanets = new List<Planeter>();
+
+            foreach(Planeter planet in Planetlist)
+            {
+                if (planet.Diameter >10000 && planet.Diameter <50000)
+                {
+                    diameterplanets.Add(planet);
+                }
+            }
+
+            foreach(Planeter planet in diameterplanets)
+            {
+                Console.WriteLine(planet.Navn);
+            }
+
+            Console.WriteLine();
+
+            foreach(Planeter planet in Planetlist)
+            {
+                Console.WriteLine(planet.Navn);
+            }
+
+            Planetlist.Clear();
         }
     }
 }
