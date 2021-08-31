@@ -98,7 +98,7 @@ namespace Planeterne_OOP
                 Saturn.Navn = "Saturn";
                 Saturn.Mass = 568;
                 Saturn.Diameter = 120536;
-
+                Saturn.Density = 687;
             }
         }
     }
