@@ -99,7 +99,103 @@ namespace Planeterne_OOP
                 Saturn.Mass = 568;
                 Saturn.Diameter = 120536;
                 Saturn.Density = 687;
+                Saturn.Gravity = 9.0;
+                Saturn.Rotation_period = 10.7;
+                Saturn.Length_of_day = 10.7;
+                Saturn.Distance_from_sun = 1433.5;
+                Saturn.Orbital_period = 10747;
+                Saturn.Orbital_velocity = 9.7;
+                Saturn.Mean_temperature = -140;
+                Saturn.Number_of_moons = 62;
+                Saturn.Ring_system = true;
             }
+
+            Planeter Uranus = new Planeter();
+            {
+                Uranus.Navn = "Uranus";
+                Uranus.Mass = 86.8;
+                Uranus.Diameter = 51118;
+                Uranus.Density = 1271;
+                Uranus.Gravity = 8.7;
+                Uranus.Rotation_period = -17.2;
+                Uranus.Length_of_day = 17.2;
+                Uranus.Distance_from_sun = 2872.5;
+                Uranus.Orbital_period = 30589;
+                Uranus.Orbital_velocity = 6.8;
+                Uranus.Mean_temperature = -195;
+                Uranus.Number_of_moons = 27;
+                Uranus.Ring_system = true;
+            }
+
+            Planeter Neptune = new Planeter();
+            {
+                Neptune.Navn = "Neptune";
+                Neptune.Mass = 102;
+                Neptune.Diameter = 49528;
+                Neptune.Density = 1638;
+                Neptune.Gravity = 11.0;
+                Neptune.Rotation_period = 16.1;
+                Neptune.Length_of_day = 16.1;
+                Neptune.Distance_from_sun = 4495.1;
+                Neptune.Orbital_period = 59800;
+                Neptune.Orbital_velocity = 5.4;
+                Neptune.Mean_temperature = -200;
+                Neptune.Number_of_moons = 14;
+                Neptune.Ring_system = true;
+            }
+
+            Planeter Pluto = new Planeter();
+            {
+                Pluto.Navn = "Pluto";
+                Pluto.Mass = 0.0146;
+                Pluto.Diameter = 2370;
+                Pluto.Density = 2095;
+                Pluto.Gravity = 0.7;
+                Pluto.Rotation_period = -153.3;
+                Pluto.Length_of_day = 153.3;
+                Pluto.Distance_from_sun = 5906.4;
+                Pluto.Orbital_period = 90560;
+                Pluto.Orbital_velocity = 4.7;
+                Pluto.Mean_temperature = -225;
+                Pluto.Number_of_moons = 5;
+                Pluto.Ring_system = false;
+            }
+
+            List<Planeter> Planetlist = new List<Planeter>();
+
+            Planetlist.Add(Mercury);
+            Planetlist.Add(Earth);
+            Planetlist.Add(Mars);
+            Planetlist.Add(Jupiter);
+            Planetlist.Add(Saturn);
+            Planetlist.Add(Uranus);
+            Planetlist.Add(Neptune);
+            Planetlist.Add(Pluto);
+
+            foreach (Planeter Planet in Planetlist)
+            {
+                Console.WriteLine(Planet.Navn);
+            }
+            Console.WriteLine();
+            Planetlist.Insert(1, Venus);
+
+            foreach (Planeter Planet in Planetlist)
+            {
+                Console.WriteLine(Planet.Navn);
+            }
+            Console.WriteLine();
+
+            Planetlist.Remove(Pluto);
+
+            foreach (Planeter Planet in Planetlist)
+            {
+                Console.WriteLine(Planet.Navn);
+            }
+            Console.WriteLine();
+
+            Planetlist.Add(Pluto);
+
+            Console.WriteLine(Planetlist.Count);
         }
     }
 }
